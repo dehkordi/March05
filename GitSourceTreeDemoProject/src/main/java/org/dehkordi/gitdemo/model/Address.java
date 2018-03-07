@@ -4,7 +4,6 @@ public class Address {
 
 	String firstLine;
 	String secondLine;
-	String theardLine;
 	String city;
 	String state;
 	String country;
@@ -20,12 +19,6 @@ public class Address {
 	}
 	public void setSecondLine(String secondLine) {
 		this.secondLine = secondLine;
-	}
-	public String getTheardLine() {
-		return theardLine;
-	}
-	public void setTheardLine(String theardLine) {
-		this.theardLine = theardLine;
 	}
 	public String getCity() {
 		return city;
@@ -55,7 +48,6 @@ public class Address {
 		result = prime * result + ((firstLine == null) ? 0 : firstLine.hashCode());
 		result = prime * result + ((secondLine == null) ? 0 : secondLine.hashCode());
 		result = prime * result + ((state == null) ? 0 : state.hashCode());
-		result = prime * result + ((theardLine == null) ? 0 : theardLine.hashCode());
 		return result;
 	}
 	
@@ -92,11 +84,6 @@ public class Address {
 			if (other.state != null)
 				return false;
 		} else if (!state.equals(other.state))
-			return false;
-		if (theardLine == null) {
-			if (other.theardLine != null)
-				return false;
-		} else if (!theardLine.equals(other.theardLine))
 			return false;
 		return true;
 	}
