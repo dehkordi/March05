@@ -3,6 +3,7 @@ package org.dehkordi.gitdemo.model;
 public class Company {
 	private String duns;
 	private String name;
+	private Address address;
 
 	public String getDuns() {
 		return duns;
@@ -18,6 +19,14 @@ public class Company {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 	@Override
