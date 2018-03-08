@@ -2,6 +2,7 @@ package org.dehkordi.gitdemo.model;
 
 public class Company {
 	private String duns;
+	private String name;
 
 	public String getDuns() {
 		return duns;
@@ -9,6 +10,14 @@ public class Company {
 
 	public void setDuns(String duns) {
 		this.duns = duns;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
