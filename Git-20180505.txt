@@ -1,0 +1,119 @@
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment
+$ mkdir March05
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment
+$ cd March05/
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05
+$ echo "# March05" >> README.md
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05
+$ git init
+Initialized empty Git repository in C:/Users/mhdde/tDevelopment/March05/.git/
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git commit -m "first commit"
+[master (root-commit) 408d20a] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git remote add origin https://github.com/dehkordi/March05.git
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 219 bytes | 109.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dehkordi/March05.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git checkout -b qa --track origin/qa
+fatal: 'origin/qa' is not a commit and a branch 'qa' cannot be created from it
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git remote show
+origin
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git branch
+* master
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git push origin qa:qa
+error: src refspec qa does not match any.
+error: failed to push some refs to 'https://github.com/dehkordi/March05.git'
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git branch --track qa origin/qa
+error: the requested upstream branch 'origin/qa' does not exist
+hint:
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ git checkout -b qa
+Switched to a new branch 'qa'
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (qa)
+$ git push -u origin qa
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/dehkordi/March05.git
+ * [new branch]      qa -> qa
+Branch 'qa' set up to track remote branch 'qa' from 'origin'.
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (qa)
+$ gt branch -a
+bash: gt: command not found
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (qa)
+$ git branch -a
+  master
+* qa
+  remotes/origin/master
+  remotes/origin/qa
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (qa)
+$ git checkout -b development
+Switched to a new branch 'development'
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (development)
+$ git push -u origin development
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/dehkordi/March05.git
+ * [new branch]      development -> development
+Branch 'development' set up to track remote branch 'development' from 'origin'.
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (development)
+$ git branch -a
+* development
+  master
+  qa
+  remotes/origin/development
+  remotes/origin/master
+  remotes/origin/qa
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (development)
+$ pwd
+/c/Users/mhdde/tDevelopment/March05
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (development)
+$
+
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$ cat test001.txt
+the first line in test001.txt
+mhdde@DESKTOP-JBPOSCV MINGW64 ~/tDevelopment/March05 (master)
+$
